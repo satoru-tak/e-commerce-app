@@ -4,7 +4,7 @@ ENV LANG=C.UTF-8 \
     TZ=Asia/Tokyo
 
 RUN apt-get update -qq \
-  && apt-get install -y postgresql-client vim \
+  && apt-get install -y postgresql-client vim --no-install-recommends libvips42\
   && apt-get clean \
   && rm -rf /var/cache/apt/archives/* \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
